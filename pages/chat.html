@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang='ru'>
+<head>
+<meta charset='UTF-8'>
+<title>Чат с Лавандой</title>
+<link rel='stylesheet' href='../assets/css/style.css'>
+</head>
+<body>
+<h2>Чат с Лавандой</h2>
+<div id='chat-box' style='height: 200px; border: 1px solid #ccc; overflow-y: scroll; background: #fff;'></div>
+<input type='text' id='user-input' placeholder='Напиши что-нибудь...'> <button onclick='sendMessage()'>Отправить</button>
+<script>
+function sendMessage() {
+  const box = document.getElementById('chat-box');
+  const input = document.getElementById('user-input');
+  const msg = input.value;
+  box.innerHTML += `<div><b>Ты:</b> ${msg}</div>`;
+  box.innerHTML += `<div><b>Лаванда:</b> Всё будет хорошо, дружок!</div>`;
+  input.value = '';
+}
+</script>
+</body>
+</html>
